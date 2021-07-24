@@ -6,7 +6,6 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.media.RingtoneManager
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
@@ -28,7 +27,6 @@ class ForegroundService : Service(), CountDownTicker.Listener {
             .setContentIntent(getPendingIntent())
             .setSilent(true)
             .setSmallIcon(R.drawable.ic_baseline_access_alarm_24)
-            //.setProgress(100, 50, false)
     }
 
     override fun onCreate() {
@@ -135,7 +133,7 @@ class ForegroundService : Service(), CountDownTicker.Listener {
     override fun onTick(millisUntilFinished: Long) {
         notificationManager?.notify(
             NOTIFICATION_ID,
-            getNotification(millisUntilFinished.displayTime().dropLast(3))
+            getNotification(millisUntilFinished.displayTime())
         )
     }
 

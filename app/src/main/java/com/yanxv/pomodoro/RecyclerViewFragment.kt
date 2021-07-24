@@ -38,6 +38,11 @@ class RecyclerViewFragment : Fragment(), LifecycleObserver {
         return binding.root
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
     private fun initView() {
         binding.recycler.apply {
             layoutManager = LinearLayoutManager(context)

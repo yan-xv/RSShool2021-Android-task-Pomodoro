@@ -3,7 +3,6 @@
     package="com.yanxv.pomodoro">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"

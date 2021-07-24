@@ -56,7 +56,7 @@ class TimerViewHolder(
     }
 
     private fun startTimer() {
-        val drawable = resources.getDrawable(R.drawable.ic_baseline_pause_24)
+        val drawable = resources.getDrawable(R.drawable.ic_baseline_pause_24, null)
         with(binding) {
             startPauseButton.setImageDrawable(drawable)
             blinkingIndicator.isInvisible = false
@@ -64,13 +64,14 @@ class TimerViewHolder(
                 (blinkingIndicator.background as? AnimationDrawable)?.start()
             progressBarCircular.setFinished(false)
         }
+
         setColorView(Color.WHITE)
 
         bStarted = true;
     }
 
     private fun stopTimer(bFinished: Boolean) {
-        val drawable = resources.getDrawable(R.drawable.ic_baseline_play_arrow_24)
+        val drawable = resources.getDrawable(R.drawable.ic_baseline_play_arrow_24, null)
         with(binding) {
             startPauseButton.setImageDrawable(drawable)
             blinkingIndicator.isInvisible = true
