@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="EndTimer">
+        <item name="android:background">@color/purple_200</item>
+    </style>
+    <style name="StopTimer">
+        <item name="android:background">@color/white</item>
+    </style>
+</resources>

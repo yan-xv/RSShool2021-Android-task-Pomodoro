@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="ProgressBarCircle">
+        <attr name="custom_color_front" format="color" />
+        <attr name="custom_color_back" format="color" />
+        <attr name="custom_color_center" format="color" />
+    </declare-styleable>
+</resources>
